@@ -1,20 +1,17 @@
-// document.body.children[1].children[0].href = 'https://google.com'
+let textElement = document.querySelector('input');
+let num = document.getElementById('counter');
+let spanElement = document.getElementById('number-style');
 
-const anchorElement = document.getElementById('external-link');
-anchorElement.href = "https://google.com"
-anchorElement.textContent = "changed link";
-
-// creating elements
-const newElement = document.createElement('a');
-newElement.href = "https://google.com";
-newElement.textContent = "This leads to google";
-
-const firstParagraph  = document.querySelector('p');
-firstParagraph.append(newElement);
-
-// removing elements
-let element = document.querySelector('a');
-element.remove();
-
-// moving elements
-firstParagraph.parentElement.append(firstParagraph);
+function count (event) {
+  console.log(textElement.value)
+  num.textContent = 60 - textElement.value.length
+  if(Number(num.textContent) < 10){
+    num.classList.add('warning');
+    textElement.classList.add('warning');
+  }
+  if(Number(num.textContent) > 10){
+    num.classList.remove('warning');
+    textElement.classList.remove('warning');
+  }
+}
+textElement.addEventListener('input', count);

@@ -1,0 +1,47 @@
+body{
+  background-color: rgb(83, 82, 82);
+  font-family: sans-serif;
+}
+p {
+  margin: 0;
+  padding: 0;
+  font-weight: bolder;
+}
+input {
+  margin:0.5rem 0.5rem 0.5rem 0;
+  width: 60%;
+  border: 1px solid rgb(204, 204, 204);
+  height: 1.25rem;
+  border-radius: 4px;
+}
+input:focus {
+  background-color: rgb(251, 245, 191);
+}
+button {
+  display: block;
+  background-color: rgb(197, 177, 48);
+  padding: 6px 16px;
+  border-radius: 4px;
+  border-style: none;
+  border-color: white;
+  cursor: pointer;
+}
+button:hover {
+  background-color:  rgb(245, 213, 5);
+}
+.card {
+  position: relative;
+  top:80px;
+  background-color: rgb(243, 243, 198);
+  border-radius: 5px;
+  width: 60%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 1rem;
+}
+input.warning {
+  background-color: rgb(248, 191, 145);
+}
+#counter.warning {
+  color: rgb(211, 109, 26);
+}
